@@ -45,7 +45,7 @@ static NSString *const kGHFontListFontNameKey = @"font_name";
     
     [self _addSubView:tableView toView:self.view insets:UIEdgeInsetsZero];
     
-    UIBarButtonItem *closeButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemClose target:self action:@selector(_closeBtnClick)];
+    UIBarButtonItem *closeButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemStop target:self action:@selector(_closeBtnClick)];
     self.navigationItem.leftBarButtonItem = closeButtonItem;
     
     [self _reloadFonts];
