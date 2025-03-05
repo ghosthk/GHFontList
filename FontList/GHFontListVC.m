@@ -184,6 +184,9 @@ static NSString *const kGHFontListFontNameKey = @"font_name";
 #pragma mark - UITableViewDelegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     NSString *strFontName = _fontList[indexPath.section][kGHFontListFontNameKey][indexPath.row];
+    // 复制到粘贴板
+    UIPasteboard *pasteboard = [UIPasteboard generalPasteboard];
+    [pasteboard setString:strFontName];
     NSLog(@"select font name = %@",strFontName);
 }
 
